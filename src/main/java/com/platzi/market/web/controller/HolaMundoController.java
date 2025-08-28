@@ -1,8 +1,6 @@
 package com.platzi.market.web.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/saludar")
@@ -12,4 +10,10 @@ public class HolaMundoController {
     public String saludar(){
         return "Nunca pares de aprender";
     }
+
+    @PostMapping
+    public String crearMensaje(@RequestBody String mensaje) {
+        return "Mensaje recibido: " + mensaje;
+    }
+
 }
