@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.*;
 public class HolaMundoController {
 
     @GetMapping("/hola")
-    public String saludar(){
-        return "Nunca pares de aprender";
+    public String getCategory(){
+        return "Nunca pares de Aprender";
+
     }
 
     @PostMapping
